@@ -2,11 +2,13 @@
 
 <div align="center">
 
+[中文](./README.md) | [English](./README_en.md)
+
+---
+
 **洞悉命运起伏，预见人生轨迹**
 
 一个结合传统八字命理与现代金融数据可视化的 AI 命运分析工具
-
-An AI-powered destiny analysis tool combining traditional Chinese BaZi numerology with modern financial data visualization
 
 ---
 
@@ -16,12 +18,7 @@ An AI-powered destiny analysis tool combining traditional Chinese BaZi numerolog
 
 </div>
 
----
-
-<details open>
-<summary><b>📖 中文文档 | Chinese Documentation</b> (点击展开/收起)</summary>
-
-### 项目简介
+## 📖 项目简介
 
 人生 K 线是一个创新的命运分析应用，将传统中国八字命理学与现代金融 K 线图可视化技术相结合。通过 AI 驱动的分析，将您的一生运势转化为直观的股票走势图，帮助您：
 
@@ -30,7 +27,7 @@ An AI-powered destiny analysis tool combining traditional Chinese BaZi numerolog
 - 🔮 把握关键转折点
 - 📊 预见 100 年人生轨迹
 
-### 📸 系统展示
+## 📸 系统展示
 
 <div align="center">
 
@@ -48,7 +45,7 @@ An AI-powered destiny analysis tool combining traditional Chinese BaZi numerolog
 
 </div>
 
-### ✨ 核心功能
+## ✨ 核心功能
 
 - **智能八字排盘**：自动计算真太阳时和农历日期
 - **AI 命运分析**：基于 Gemini AI 生成详细的人生运势报告
@@ -64,7 +61,7 @@ An AI-powered destiny analysis tool combining traditional Chinese BaZi numerolog
 - **主题模式**：支持亮色/暗色主题
 - **PDF 报告导出**：一键保存完整命运分析报告
 
-### 🛠 技术栈
+## 🛠 技术栈
 
 - **框架**: React 18.3 + TypeScript 5.8
 - **构建工具**: Vite 6.2
@@ -78,14 +75,14 @@ An AI-powered destiny analysis tool combining traditional Chinese BaZi numerolog
   - html2canvas (截图)
   - jsPDF (PDF 生成)
 
-### 🚀 快速开始
+## 🚀 快速开始
 
-#### 环境要求
+### 环境要求
 
 - Node.js 16+
 - npm 或 yarn
 
-#### 安装步骤
+### 安装步骤
 
 1. **克隆项目**
 ```bash
@@ -124,30 +121,30 @@ npm run dev
 
 打开浏览器访问 `http://localhost:5173`
 
-#### 构建生产版本
+### 构建生产版本
 
 ```bash
 npm run build
 npm run preview
 ```
 
-### 🔑 API 配置说明
+## 🔑 API 配置说明
 
 项目支持两种 API 调用方式：
 
-#### 方式一：原生 Gemini API
+### 方式一：原生 Gemini API
 ```env
 VITE_GEMINI_API_KEY=your_gemini_api_key
 VITE_BASE_URL=
 ```
 
-#### 方式二：第三方转发平台
+### 方式二：第三方转发平台
 ```env
 VITE_GEMINI_API_KEY=your_api_key
 VITE_BASE_URL=https://api.gpt.ge/v1/
 ```
 
-### 📁 项目结构
+## 📁 项目结构
 
 ```
 life-destiny-k-line/
@@ -173,7 +170,7 @@ life-destiny-k-line/
 └── README.md               # 项目文档
 ```
 
-### 🎨 使用指南
+## 🎨 使用指南
 
 1. **输入出生信息**
    - 姓名（可选）
@@ -196,245 +193,33 @@ life-destiny-k-line/
    - 点击"保存 PDF 报告"按钮
    - 生成包含完整分析的 PDF 文件
 
-### 🌐 支持的模型
+## 🌐 支持的模型
 
 - `gemini-2.0-flash-thinking-exp-01-21` (默认)
 - `gemini-2.5-flash-thinking`
 - `gemini-3-pro-preview-low`
 - 其他兼容 Gemini/OpenAI 格式的模型
 
-### 📝 开发说明
+## 📝 开发说明
 
 - 使用 `npm run dev` 启动开发服务器（支持热更新）
 - 使用 `npm run build` 构建生产版本
 - 使用 `npm run preview` 预览生产构建
 
-### ⚠️ 注意事项
+## ⚠️ 注意事项
 
 1. 本项目仅供娱乐和文化研究使用
 2. 需要有效的 Gemini API Key 才能使用
 3. API 调用会产生费用，请注意用量
 4. 真太阳时计算基于地理位置，可能存在误差
 
-### 📄 License
+## 📄 License
 
 MIT License
 
-### 👨‍💻 作者
+## 👨‍💻 作者
 
 @xiaoeen
-
-</details>
-
----
-
-<details>
-<summary><b>📖 English Documentation</b> (Click to expand/collapse)</summary>
-
-### Introduction
-
-Life K-Line is an innovative destiny analysis application that combines traditional Chinese BaZi (Four Pillars) numerology with modern financial K-line chart visualization. Through AI-powered analysis, it transforms your lifetime fortune into intuitive stock-like charts, helping you:
-
-- 🎯 Discover "bull market" periods in your life
-- ⚠️ Avoid "bear market" risks
-- 🔮 Seize key turning points
-- 📊 Foresee your 100-year life trajectory
-
-### 📸 System Screenshots
-
-<div align="center">
-
-**Homepage**
-
-<img src="doc/首页.png" alt="Homepage" width="800"/>
-
-**BaZi Charting**
-
-<img src="doc/八字排盘.png" alt="BaZi Charting" width="800"/>
-
-**K-Line Analysis**
-
-<img src="doc/k线.png" alt="K-Line Analysis" width="800"/>
-
-</div>
-
-### ✨ Key Features
-
-- **Smart BaZi Charting**: Automatic calculation of true solar time and lunar dates
-- **AI Destiny Analysis**: Detailed life fortune reports powered by Gemini AI
-- **K-Line Visualization**: 100-year fortune displayed as financial candlesticks
-- **Multi-dimensional Analysis**:
-  - Crypto/Web3 Trading Fortune
-  - Personality Analysis
-  - Career & Industry
-  - Feng Shui Recommendations
-  - Wealth Level
-  - Marriage & Relationships
-- **Multi-language Support**: Chinese/English interface switching
-- **Theme Modes**: Light/Dark theme support
-- **PDF Export**: One-click save of complete destiny analysis report
-
-### 🛠 Tech Stack
-
-- **Framework**: React 18.3 + TypeScript 5.8
-- **Build Tool**: Vite 6.2
-- **UI Components**:
-  - Recharts (Chart visualization)
-  - Lucide React (Icons)
-- **AI Services**:
-  - Google Generative AI (Native Gemini API)
-  - OpenAI SDK (Third-party forwarding support)
-- **Other Tools**:
-  - html2canvas (Screenshots)
-  - jsPDF (PDF generation)
-
-### 🚀 Quick Start
-
-#### Prerequisites
-
-- Node.js 16+
-- npm or yarn
-
-#### Installation
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/XIAOEEN/lifeline-k-.git
-cd life-destiny-k-line
-```
-
-2. **Install dependencies**
-```bash
-npm install
-```
-
-3. **Configure environment variables**
-
-Create `.env.local` file in the project root:
-
-```env
-# Gemini API Key (Required)
-VITE_GEMINI_API_KEY=your_api_key_here
-
-# Model name (Optional, default: gemini-2.0-flash-thinking-exp-01-21)
-VITE_MODEL_NAME=gemini-2.0-flash-thinking-exp-01-21
-
-# API Base URL (Optional)
-# Leave empty for native Gemini API
-# Fill in URL for third-party forwarding (e.g., https://api.gpt.ge/v1/)
-VITE_BASE_URL=
-```
-
-4. **Start development server**
-```bash
-npm run dev
-```
-
-5. **Access the application**
-
-Open your browser and visit `http://localhost:5173`
-
-#### Build for Production
-
-```bash
-npm run build
-npm run preview
-```
-
-### 🔑 API Configuration
-
-The project supports two API calling methods:
-
-#### Method 1: Native Gemini API
-```env
-VITE_GEMINI_API_KEY=your_gemini_api_key
-VITE_BASE_URL=
-```
-
-#### Method 2: Third-party Forwarding Platform
-```env
-VITE_GEMINI_API_KEY=your_api_key
-VITE_BASE_URL=https://api.gpt.ge/v1/
-```
-
-### 📁 Project Structure
-
-```
-life-destiny-k-line/
-├── src/
-│   ├── components/          # React components
-│   │   ├── InputForm.tsx    # Input form
-│   │   ├── BaZiDisplay.tsx  # BaZi display
-│   │   ├── BaZiConfirmation.tsx  # Confirmation page
-│   │   ├── KLineChart.tsx   # K-line chart
-│   │   └── AnalysisSection.tsx   # Analysis report
-│   ├── services/            # Service layer
-│   │   └── geminiService.ts # AI API calls
-│   ├── types.ts             # TypeScript type definitions
-│   ├── locales.ts           # Multi-language configuration
-│   ├── constants.ts         # Constants
-│   ├── App.tsx              # Main app component
-│   └── index.tsx            # App entry point
-├── public/                  # Static assets
-├── .env.local              # Environment variables (create yourself)
-├── package.json            # Project configuration
-├── tsconfig.json           # TypeScript configuration
-├── vite.config.ts          # Vite configuration
-└── README.md               # Project documentation
-```
-
-### 🎨 User Guide
-
-1. **Enter Birth Information**
-   - Name (Optional)
-   - Gender
-   - Birth Date (Gregorian)
-   - Birth Time
-   - Birth Location
-
-2. **Confirm BaZi Chart**
-   - AI automatically calculates true solar time
-   - Generates Four Pillars
-   - Calculates Big Luck start age
-
-3. **View Fortune Analysis**
-   - 100-year fortune K-line chart
-   - Six-dimensional detailed analysis
-   - Annual detailed reviews
-
-4. **Export Report**
-   - Click "Save Report as PDF" button
-   - Generate PDF file with complete analysis
-
-### 🌐 Supported Models
-
-- `gemini-2.0-flash-thinking-exp-01-21` (Default)
-- `gemini-2.5-flash-thinking`
-- `gemini-3-pro-preview-low`
-- Other Gemini/OpenAI compatible models
-
-### 📝 Development
-
-- Use `npm run dev` to start development server (with hot reload)
-- Use `npm run build` to build for production
-- Use `npm run preview` to preview production build
-
-### ⚠️ Disclaimer
-
-1. This project is for entertainment and cultural research purposes only
-2. Requires a valid Gemini API Key to use
-3. API calls may incur costs, please monitor usage
-4. True solar time calculation is based on geographic location and may have errors
-
-### 📄 License
-
-MIT License
-
-### 👨‍💻 Author
-
-@xiaoeen
-
-</details>
 
 ---
 
