@@ -6,15 +6,22 @@
 
 一个结合传统八字命理与现代金融数据可视化的 AI 命运分析工具
 
-[English](#english) | [中文](#中文)
+An AI-powered destiny analysis tool combining traditional Chinese BaZi numerology with modern financial data visualization
+
+---
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/React-18.3-blue.svg)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue.svg)](https://www.typescriptlang.org/)
 
 </div>
 
 ---
 
-## 中文
+<details open>
+<summary><b>📖 中文文档 | Chinese Documentation</b> (点击展开/收起)</summary>
 
-### 📖 项目简介
+### 项目简介
 
 人生 K 线是一个创新的命运分析应用，将传统中国八字命理学与现代金融 K 线图可视化技术相结合。通过 AI 驱动的分析，将您的一生运势转化为直观的股票走势图，帮助您：
 
@@ -63,21 +70,21 @@
 #### 安装步骤
 
 1. **克隆项目**
-\`\`\`bash
-git clone <repository-url>
+```bash
+git clone https://github.com/XIAOEEN/lifeline-k-.git
 cd life-destiny-k-line
-\`\`\`
+```
 
 2. **安装依赖**
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 3. **配置环境变量**
 
-在项目根目录创建 \`.env.local\` 文件：
+在项目根目录创建 `.env.local` 文件：
 
-\`\`\`env
+```env
 # Gemini API Key (必填)
 VITE_GEMINI_API_KEY=your_api_key_here
 
@@ -88,43 +95,43 @@ VITE_MODEL_NAME=gemini-2.0-flash-thinking-exp-01-21
 # 留空使用原生 Gemini API
 # 填写 URL 使用第三方转发平台（如: https://api.gpt.ge/v1/）
 VITE_BASE_URL=
-\`\`\`
+```
 
 4. **启动开发服务器**
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 5. **访问应用**
 
-打开浏览器访问 \`http://localhost:5173\`
+打开浏览器访问 `http://localhost:5173`
 
 #### 构建生产版本
 
-\`\`\`bash
+```bash
 npm run build
 npm run preview
-\`\`\`
+```
 
 ### 🔑 API 配置说明
 
 项目支持两种 API 调用方式：
 
 #### 方式一：原生 Gemini API
-\`\`\`env
+```env
 VITE_GEMINI_API_KEY=your_gemini_api_key
 VITE_BASE_URL=
-\`\`\`
+```
 
 #### 方式二：第三方转发平台
-\`\`\`env
+```env
 VITE_GEMINI_API_KEY=your_api_key
 VITE_BASE_URL=https://api.gpt.ge/v1/
-\`\`\`
+```
 
 ### 📁 项目结构
 
-\`\`\`
+```
 life-destiny-k-line/
 ├── src/
 │   ├── components/          # React 组件
@@ -146,7 +153,7 @@ life-destiny-k-line/
 ├── tsconfig.json           # TypeScript 配置
 ├── vite.config.ts          # Vite 配置
 └── README.md               # 项目文档
-\`\`\`
+```
 
 ### 🎨 使用指南
 
@@ -173,16 +180,16 @@ life-destiny-k-line/
 
 ### 🌐 支持的模型
 
-- \`gemini-2.0-flash-thinking-exp-01-21\` (默认)
-- \`gemini-2.5-flash-thinking\`
-- \`gemini-3-pro-preview-low\`
+- `gemini-2.0-flash-thinking-exp-01-21` (默认)
+- `gemini-2.5-flash-thinking`
+- `gemini-3-pro-preview-low`
 - 其他兼容 Gemini/OpenAI 格式的模型
 
 ### 📝 开发说明
 
-- 使用 \`npm run dev\` 启动开发服务器（支持热更新）
-- 使用 \`npm run build\` 构建生产版本
-- 使用 \`npm run preview\` 预览生产构建
+- 使用 `npm run dev` 启动开发服务器（支持热更新）
+- 使用 `npm run build` 构建生产版本
+- 使用 `npm run preview` 预览生产构建
 
 ### ⚠️ 注意事项
 
@@ -199,11 +206,14 @@ MIT License
 
 @xiaoeen
 
+</details>
+
 ---
 
-## English
+<details>
+<summary><b>📖 English Documentation</b> (Click to expand/collapse)</summary>
 
-### 📖 Introduction
+### Introduction
 
 Life K-Line is an innovative destiny analysis application that combines traditional Chinese BaZi (Four Pillars) numerology with modern financial K-line chart visualization. Through AI-powered analysis, it transforms your lifetime fortune into intuitive stock-like charts, helping you:
 
@@ -252,21 +262,21 @@ Life K-Line is an innovative destiny analysis application that combines traditio
 #### Installation
 
 1. **Clone the repository**
-\`\`\`bash
-git clone <repository-url>
+```bash
+git clone https://github.com/XIAOEEN/lifeline-k-.git
 cd life-destiny-k-line
-\`\`\`
+```
 
 2. **Install dependencies**
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 3. **Configure environment variables**
 
-Create \`.env.local\` file in the project root:
+Create `.env.local` file in the project root:
 
-\`\`\`env
+```env
 # Gemini API Key (Required)
 VITE_GEMINI_API_KEY=your_api_key_here
 
@@ -277,43 +287,43 @@ VITE_MODEL_NAME=gemini-2.0-flash-thinking-exp-01-21
 # Leave empty for native Gemini API
 # Fill in URL for third-party forwarding (e.g., https://api.gpt.ge/v1/)
 VITE_BASE_URL=
-\`\`\`
+```
 
 4. **Start development server**
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 5. **Access the application**
 
-Open your browser and visit \`http://localhost:5173\`
+Open your browser and visit `http://localhost:5173`
 
 #### Build for Production
 
-\`\`\`bash
+```bash
 npm run build
 npm run preview
-\`\`\`
+```
 
 ### 🔑 API Configuration
 
 The project supports two API calling methods:
 
 #### Method 1: Native Gemini API
-\`\`\`env
+```env
 VITE_GEMINI_API_KEY=your_gemini_api_key
 VITE_BASE_URL=
-\`\`\`
+```
 
 #### Method 2: Third-party Forwarding Platform
-\`\`\`env
+```env
 VITE_GEMINI_API_KEY=your_api_key
 VITE_BASE_URL=https://api.gpt.ge/v1/
-\`\`\`
+```
 
 ### 📁 Project Structure
 
-\`\`\`
+```
 life-destiny-k-line/
 ├── src/
 │   ├── components/          # React components
@@ -335,7 +345,7 @@ life-destiny-k-line/
 ├── tsconfig.json           # TypeScript configuration
 ├── vite.config.ts          # Vite configuration
 └── README.md               # Project documentation
-\`\`\`
+```
 
 ### 🎨 User Guide
 
@@ -362,16 +372,16 @@ life-destiny-k-line/
 
 ### 🌐 Supported Models
 
-- \`gemini-2.0-flash-thinking-exp-01-21\` (Default)
-- \`gemini-2.5-flash-thinking\`
-- \`gemini-3-pro-preview-low\`
+- `gemini-2.0-flash-thinking-exp-01-21` (Default)
+- `gemini-2.5-flash-thinking`
+- `gemini-3-pro-preview-low`
 - Other Gemini/OpenAI compatible models
 
 ### 📝 Development
 
-- Use \`npm run dev\` to start development server (with hot reload)
-- Use \`npm run build\` to build for production
-- Use \`npm run preview\` to preview production build
+- Use `npm run dev` to start development server (with hot reload)
+- Use `npm run build` to build for production
+- Use `npm run preview` to preview production build
 
 ### ⚠️ Disclaimer
 
@@ -387,6 +397,8 @@ MIT License
 ### 👨‍💻 Author
 
 @xiaoeen
+
+</details>
 
 ---
 
