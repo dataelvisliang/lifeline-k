@@ -48,11 +48,15 @@ const BaZiConfirmation: React.FC<BaZiConfirmationProps> = ({ data, onConfirm, on
   const t = getTexts(lang);
   const [editableBaZi, setEditableBaZi] = useState<BaZiChart>(data.bazi);
   const [editableDaYun, setEditableDaYun] = useState<string[]>(data.daYun);
+  const [editableStartAge, setEditableStartAge] = useState<number>(data.startAge);
+  const [editableDirection, setEditableDirection] = useState<string>(data.direction);
 
   // Sync state if data prop updates (e.g. re-calculation)
   useEffect(() => {
     setEditableBaZi(data.bazi);
     setEditableDaYun(data.daYun);
+    setEditableStartAge(data.startAge);
+    setEditableDirection(data.direction);
   }, [data]);
 
   const handlePillarChange = (key: keyof BaZiChart, field: 'gan' | 'zhi', value: string) => {
@@ -66,7 +70,9 @@ const BaZiConfirmation: React.FC<BaZiConfirmationProps> = ({ data, onConfirm, on
     onConfirm({
         ...data,
         bazi: editableBaZi,
-        daYun: editableDaYun
+        daYun: editableDaYun,
+        startAge: editableStartAge,
+        direction: editableDirection
     });
   };
 
@@ -155,17 +161,36 @@ const BaZiConfirmation: React.FC<BaZiConfirmationProps> = ({ data, onConfirm, on
 
       {/* Da Yun (Big Luck) */}
       <div className="bg-gray-50 dark:bg-slate-700/50 rounded-2xl p-5 mb-8 transition-colors">
-        <div className="flex justify-between items-center mb-4 border-b border-gray-200 dark:border-slate-600 pb-2">
+        <div className="flex justify-between items-center mb-4 border-b border-gray-200 dark:border-slate-600 pb-2 flex-wrap gap-4">
             <div className="flex items-center gap-2">
                 <div className="p-1 bg-purple-100 dark:bg-purple-900/50 rounded-full text-purple-600 dark:text-purple-400">
                     <Edit2 size={12} />
                 </div>
                 <h3 className="font-bold text-slate-800 dark:text-white">{t.daYun}</h3>
             </div>
-            <div className="text-xs text-gray-500 dark:text-gray-400">
-                {t.startAge}: <span className="font-bold text-indigo-600 dark:text-indigo-400 text-sm">{data.startAge}</span> {t.virtualAge}
-                <span className="mx-2">|</span>
-                {t.direction}: <span className="font-bold text-indigo-600 dark:text-indigo-400">{data.direction === 'Forward' ? t.forward : t.backward}</span>
+            <div className="flex gap-4 items-center">
+                <div className="flex items-center gap-2">
+                    <span className="text-xs text-gray-500 dark:text-gray-400">{t.startAge}:</span>
+                    <input
+                        type="number"
+                        value={editableStartAge}
+                        onChange={(e) => setEditableStartAge(parseInt(e.target.value) || 0)}
+                        className="w-12 px-2 py-1 text-center text-sm font-bold text-slate-800 dark:text-slate-100 bg-white dark:bg-slate-800 border border-purple-200 dark:border-purple-800 rounded hover:border-purple-400 dark:hover:border-purple-600 focus:border-purple-500 focus:outline-none transition-colors"
+                    />
+                    <span className="text-xs text-gray-500 dark:text-gray-400">{t.virtualAge}</span>
+                </div>
+                <span className="text-gray-400 dark:text-gray-500">|</span>
+                <div className="flex items-center gap-2">
+                    <span className="text-xs text-gray-500 dark:text-gray-400">{t.direction}:</span>
+                    <select
+                        value={editableDirection}
+                        onChange={(e) => setEditableDirection(e.target.value)}
+                        className="px-2 py-1 text-sm font-bold text-slate-800 dark:text-slate-100 bg-white dark:bg-slate-800 border border-purple-200 dark:border-purple-800 rounded hover:border-purple-400 dark:hover:border-purple-600 focus:border-purple-500 focus:outline-none transition-colors cursor-pointer"
+                    >
+                        <option value="Forward">{t.forward}</option>
+                        <option value="Backward">{t.backward}</option>
+                    </select>
+                </div>
             </div>
         </div>
         
