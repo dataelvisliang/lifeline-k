@@ -6,7 +6,7 @@ import KLineChart from './components/KLineChart';
 import AnalysisSection from './components/AnalysisSection';
 import { UserInput, AnalysisResult, Language, BaZiResult } from './types';
 import { calculateBaZi, generateDestinyAnalysis } from './services/geminiService';
-import { Sparkles, Languages, Moon, Sun } from 'lucide-react';
+import { Sparkles, Languages, Moon, Sun, Github } from 'lucide-react';
 import { getTexts } from './locales';
 
 const App: React.FC = () => {
@@ -103,6 +103,17 @@ const App: React.FC = () => {
           </div>
           
           <div className="flex items-center gap-3">
+             {/* GitHub Link */}
+             <a
+                href="https://github.com/XIAOEEN/lifeline-k-"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors"
+                title="View on GitHub"
+             >
+                <Github size={16} />
+             </a>
+
              {/* Theme Toggle */}
              <button
                 onClick={toggleTheme}
@@ -121,7 +132,7 @@ const App: React.FC = () => {
              </button>
 
              {step !== 'input' && (
-                <button 
+                <button
                     onClick={handleReset}
                     className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors ml-1"
                 >
